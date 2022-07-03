@@ -111,4 +111,4 @@ export const mangaObj = (info: any, slug: string, select: RootState, type: strin
 export const TITLES = ['latest', 'browse'];
 export const FORYOU = ['recents', 'bookmarks'];
 
-export const WEBSITE_URL = 'https://mangamax.vercel.app/'
+export const WEBSITE_URL = 'https://matnamtruyen-chauquangtam.vercel.app/'
