@@ -17,7 +17,7 @@ import { useRouter } from "next/router";
 import Head from 'src/components/Head';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
-import { wrapper, store, persistor } from 'src/store';
+import { wrapper, store, persistor } from 'src/store/index';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -157,7 +157,7 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <Head />
       <Provider store={store}>
-        <PersistGate persistor={persistor} Loading={null}>
+        <PersistGate Loading={null} persistor={persistor} >
           <QueryClientProvider client={queryClient}>
             <Navbar scroll={scroll} />
             <Component {...pageProps} />

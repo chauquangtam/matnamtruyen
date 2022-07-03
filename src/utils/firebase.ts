@@ -19,13 +19,14 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA2_xjmGn94gcudgAgb0Y9axgcNBJHu1bk",
-  authDomain: "causal-guide-299607.firebaseapp.com",
-  projectId: "causal-guide-299607",
-  storageBucket: "causal-guide-299607.appspot.com",
-  messagingSenderId: "938214341085",
-  appId: "1:938214341085:web:38378d71584a628bfc1e34",
-  measurementId: "G-DEFERFHX1V"
+  apiKey:'AIzaSyD1iOETXXLVV6U3RqGMyTl5-rLikSyFz_c',
+  authDomain:'mangamax-6e115.firebaseapp.com',
+  databaseURL:'https://mangamax-6e115-default-rtdb.asia-southeast1.firebasedatabase.app',
+  projectId: 'mangamax-6e115',
+  storageBucket: 'mangamax-6e115.appspot.com',
+  messagingSenderId: '864291551499',
+  appId: '1:864291551499:web:d6a5c7a41251f74f684a0e',
+  measurementId: 'G-KK1QPWXKD2',
 };
 
 const app = initializeApp(firebaseConfig);
@@ -39,6 +40,7 @@ const signInWithGoogle = async () => {
     const user = res.user;
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
+    console.log("data google "+docs);
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
         uid: user.uid,
