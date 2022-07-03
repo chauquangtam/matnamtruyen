@@ -1,0 +1,28 @@
+.sidenav {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  transition: 325ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.sidenav p {
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0px;
+  font-size: 36px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
